@@ -9,7 +9,8 @@
               "alefragnani.bookmarks", // Book Marks
               "eamodio.gitlens", // GitLens
               "Wokwi.wokwi-vscode", // WokWi
-              "platformio.platformio-ide" // PlatformIO
+              "platformio.platformio-ide", // PlatformIO
+              "ms-vscode.cpptools" // C/C++ for Visual Studio Code
           ]
       }
   }
