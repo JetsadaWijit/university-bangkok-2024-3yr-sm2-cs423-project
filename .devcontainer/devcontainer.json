@@ -1,0 +1,15 @@
+{
+  "name": "Container",
+  "customizations": {
+      "vscode": {
+          "settings": {
+              "workbench.colorTheme": "Default Dark Modern" // Dark Modern
+          },
+          "extensions": [
+              "alefragnani.bookmarks", // Book Marks
+              "eamodio.gitlens", // GitLens
+              "Wokwi.wokwi-vscode" // WokWi
+          ]
+      }
+  }
+}
