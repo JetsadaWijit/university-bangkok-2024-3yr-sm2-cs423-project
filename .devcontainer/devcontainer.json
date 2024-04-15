@@ -8,7 +8,8 @@
           "extensions": [
               "alefragnani.bookmarks", // Book Marks
               "eamodio.gitlens", // GitLens
-              "Wokwi.wokwi-vscode" // WokWi
+              "Wokwi.wokwi-vscode", // WokWi
+              "platformio.platformio-ide" // PlatformIO
           ]
       }
   }
