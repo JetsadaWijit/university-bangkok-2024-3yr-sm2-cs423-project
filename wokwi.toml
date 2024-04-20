@@ -1,4 +1,4 @@
 [wokwi]
 version = 1
-elf = ".pio/build/esp32/firmware.elf"
-firmware = ".pio/build/esp32/firmware.bin"
+elf = ".pio/build/4d_systems_esp32s3_gen4_r8n16/firmware.elf"
+firmware = ".pio/build/4d_systems_esp32s3_gen4_r8n16/firmware.bin"
