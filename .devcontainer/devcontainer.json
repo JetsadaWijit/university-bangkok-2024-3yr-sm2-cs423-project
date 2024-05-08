@@ -6,6 +6,8 @@
               "workbench.colorTheme": "Default Dark Modern" // Dark Modern
           },
           "extensions": [
+              "ms-azuretools.vscode-docker", // Docker
+              "GitHub.copilot", // Github Copilot
               "alefragnani.bookmarks", // Book Marks
               "eamodio.gitlens", // GitLens
               "Wokwi.wokwi-vscode", // WokWi
