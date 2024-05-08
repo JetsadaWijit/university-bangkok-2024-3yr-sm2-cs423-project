@@ -1,9 +1,10 @@
-#include <iostream>
+#include <Arduino.h>
 
 void setup() {
-    // No serial initialization needed for console output
+    Serial.begin(9600);
 }
 
 void loop() {
-    std::cout << "Loop!" << std::endl;  // Or printf("Loop!\n");
+    Serial.println("Hello World");
+    sleep(1000);
 }
