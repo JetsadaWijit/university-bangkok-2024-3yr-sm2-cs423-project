@@ -1,3 +1,4 @@
+#include <WiFi.h>
 #include <Arduino.h>
 #include <MySQL_Connection.h>
 #include <MySQL_Cursor.h>
@@ -14,6 +15,16 @@ const char* mysql_database = "cs423";
 void setup() {
     Serial.begin(9600);
     createTable();
+    WiFi.begin(ssid, password);
+    while (WiFi.status() != WL_CONNECTED) {
+        delay(1000);
+        Serial.println("Connecting to WiFi..");
+    }
+    while (WiFi.status() != WL_CONNECTED) {
+        delay(500);
+        Serial.print(".");
+    }
+
     // get time from os
     time_t currentTime = time(NULL); // Add this line
     String time = String(currentTime); // Add this line
