@@ -19,6 +19,12 @@ WiFiClient client; // Declare the client variable
 
 MySQL_Connection conn((Client *)&client);
 
+// Define the GPIO pin connected to the PIR motion sensor.
+const int PIR_PIN = 2;
+
+// Define the GPIO pin connected to the LED.
+const int LED_PIN = 4;
+
 void setup() {
     Serial.begin(9600);
     WiFi.begin(ssid, password);
@@ -30,6 +36,12 @@ void setup() {
         delay(500);
         Serial.print(".");
     }
+    // Set the PIR motion sensor pin as an input.
+    pinMode(PIR_PIN, INPUT);
+
+    // Set the LED pin as an output.
+    pinMode(LED_PIN, OUTPUT);
+
     createTable();
 
     // get time from os
@@ -39,7 +51,18 @@ void setup() {
 }
 
 void loop() {
-    Serial.println("Hello World");
+    // Read the value of the PIR motion sensor pin.
+    int motion = digitalRead(PIR_PIN);
+
+    // If motion is detected, turn on the LED.
+    if (motion == HIGH) {
+        digitalWrite(LED_PIN, HIGH);
+    }
+    // If there is no motion, turn off the LED.
+    else {
+        digitalWrite(LED_PIN, LOW);
+    }
+
     sleep(1000);
 }
 
