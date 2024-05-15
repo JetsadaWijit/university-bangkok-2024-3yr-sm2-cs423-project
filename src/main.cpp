@@ -18,7 +18,6 @@ MySQL_Connection conn((Client *)&client);
 
 void setup() {
     Serial.begin(9600);
-    createTable();
     WiFi.begin(ssid, password);
     while (WiFi.status() != WL_CONNECTED) {
         delay(1000);
@@ -28,6 +27,7 @@ void setup() {
         delay(500);
         Serial.print(".");
     }
+    createTable();
 
     // get time from os
     time_t currentTime = time(NULL); // Add this line
