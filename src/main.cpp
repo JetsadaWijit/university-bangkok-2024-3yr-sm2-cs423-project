@@ -3,6 +3,7 @@
 
 void setup() {
     Serial.begin(9600);
+    createTable();
 }
 
 void loop() {
