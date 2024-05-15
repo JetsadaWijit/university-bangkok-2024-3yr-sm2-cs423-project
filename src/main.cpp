@@ -31,3 +31,18 @@ void createTable() {
         Serial.println("Connection failed.");
     }
 }
+
+// Create function insert data to table insertData(time)
+void insertData(String time) {
+    MySQL_Connection conn((Client *)&client);
+    if (conn.connect(server_addr, 3306, user, password)) {
+        Serial.println("Connected to MySQL server");
+        delay(1000);
+        MySQL_Cursor *cur_mem = new MySQL_Cursor(&conn);
+        cur_mem->execute("INSERT INTO cs423 (time) VALUES ('" + time + "')");
+        delete cur_mem;
+        conn.close();
+    } else {
+        Serial.println("Connection failed.");
+    }
+}
