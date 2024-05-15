@@ -1,9 +1,15 @@
 #include <Arduino.h>
 #include <MySQL_Connection.h>
 
+#include <time.h> // Add this line
+
 void setup() {
     Serial.begin(9600);
     createTable();
+    // get time from os
+    time_t currentTime = time(NULL); // Add this line
+    String time = String(currentTime); // Add this line
+    insertData(time);
 }
 
 void loop() {
