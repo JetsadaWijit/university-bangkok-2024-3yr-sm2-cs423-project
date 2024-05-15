@@ -1,4 +1,5 @@
 #include <WiFi.h>
+#include <WiFiClient.h>
 #include <Arduino.h>
 #include <MySQL_Connection.h>
 #include <MySQL_Cursor.h>
@@ -13,6 +14,8 @@ const char* mysql_password = "";
 const char* mysql_database = "cs423";
 
 IPAddress serveraddr(192, 168, 1, 2);  // MySQL server IP address
+
+WiFiClient client; // Declare the client variable
 
 MySQL_Connection conn((Client *)&client);
 
