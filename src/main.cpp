@@ -1,7 +1,15 @@
 #include <Arduino.h>
 #include <MySQL_Connection.h>
+#include <MySQL_Cursor.h>
 
 #include <time.h> // Add this line
+
+const char* ssid = "";
+const char* password = "";
+const char* mysql_server = "localhost";  // MySQL server IP address
+const char* mysql_user = "root";
+const char* mysql_password = "";
+const char* mysql_database = "cs423";
 
 void setup() {
     Serial.begin(9600);
